@@ -1,8 +1,8 @@
-# Nagios/Icinga Checks
+# ✅ Nagios/Icinga Checks
 
 This repository contains various active check scripts that I use from my Icinga server to monitor various things in my life.
 
-## Domain name expire checking
+## ⏰ Domain name expire checking
 
 A bunch of scripts that monitors domain expire dates. It's really annoying to forgot to renew a domain.
 
