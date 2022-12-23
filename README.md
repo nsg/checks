@@ -18,6 +18,42 @@ I wrote this because a few domains do not publish expire information in the whoi
 
 At the moment I only support ascio, but it's easy to add more providers.
 
+```
+usage: check_domain_rdap_expire.py [-h] -d DOMAIN -p {ascio} [-w WARNING] [-c CRITICAL] [-C CACHE_TIME]
+
+options:
+  -h, --help            show this help message and exit
+  -d DOMAIN, --domain DOMAIN
+                        Look up the specified domain
+  -p {ascio}, --provider {ascio}
+                        RDAP Provider
+  -w WARNING, --warning WARNING
+                        Warning level (days)
+  -c CRITICAL, --critical CRITICAL
+                        Critical level (days)
+  -C CACHE_TIME, --cache_time CACHE_TIME
+                        Cache time in seconds
+```
+
 ### check_domain_loopia_expire.py
 
 I have a few domains where the expire date it hidden, this check will use the DNS registrar Loopias API to pull the domains expire data.
+
+```
+usage: check_domain_loopia_expire.py [-h] -d DOMAIN -u USER -p PASSWORD [-w WARNING] [-c CRITICAL]
+                                     [-C CACHE_TIME]
+
+options:
+  -h, --help            show this help message and exit
+  -d DOMAIN, --domain DOMAIN
+                        Look up the specified domain
+  -u USER, --user USER  Loopia API username
+  -p PASSWORD, --password PASSWORD
+                        Loopia API password
+  -w WARNING, --warning WARNING
+                        Warning level (days)
+  -c CRITICAL, --critical CRITICAL
+                        Critical level (days)
+  -C CACHE_TIME, --cache_time CACHE_TIME
+                        Cache time in seconds
+```
