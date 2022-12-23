@@ -53,9 +53,9 @@ echo -n " created_ago=$(str_to_age $CREATED);"
 echo
 
 if [[ $EXPIRES_IN_DAYS -lt 14 ]]; then
-  exit 1
-elif [[ $EXPIRES_IN_DAYS -lt 30 ]]; then
   exit 2
+elif [[ $EXPIRES_IN_DAYS -lt 30 ]]; then
+  exit 1
 fi
 
 exit 0

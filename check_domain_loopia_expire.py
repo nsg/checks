@@ -50,10 +50,10 @@ else:
     print(f"Domain {args.domain} is not paid, it will expire in {time_between.days} days [cache: {response['cache']}]")
 
 if time_between.days < args.warning:
-    sys.exit(2)
-elif time_between.days < args.critical:
     sys.exit(1)
-elif not paid:
+elif time_between.days < args.critical:
     sys.exit(2)
+elif not paid:
+    sys.exit(1)
 else:
     sys.exit(0)

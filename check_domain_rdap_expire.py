@@ -53,8 +53,8 @@ for event in rdap_data.get("events", []):
         print(f"Domain {args.domain} will expire in {time_between.days} days [cache: {rdap_data['cache']}]")
 
         if time_between.days < args.warning:
-            sys.exit(2)
-        elif time_between.days < args.critical:
             sys.exit(1)
+        elif time_between.days < args.critical:
+            sys.exit(2)
         else:
             sys.exit(0)
